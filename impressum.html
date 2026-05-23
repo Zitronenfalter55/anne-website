@@ -979,12 +979,10 @@ footer {
     <h3 data-lang="en">Professional information</h3>
     <h3 data-lang="de">Berufsbezeichnung und berufsrechtliche Regelungen</h3>
     <p data-lang="en">
-      State-certified Breath, Speech and Voice Teacher (Schlaffhorst-Andersen Method).<br>
-      <span class="legal-placeholder"></span>
+      State-certified Breath, Speech and Voice Teacher (Schlaffhorst-Andersen Method).
     </p>
     <p data-lang="de">
-      Staatlich geprüfte Atem-, Sprech- und Stimmlehrerin (Schlaffhorst-Andersen-Methode).<br>
-      <span class="legal-placeholder"></span>
+      Staatlich geprüfte Atem-, Sprech- und Stimmlehrerin (Schlaffhorst-Andersen-Methode).
     </p>
 
     <h3 data-lang="en">VAT identification number/Tax number</h3>
@@ -1046,9 +1044,9 @@ footer {
     <a href="about.html"  data-lang="de">Über mich</a>
     <a href="contact.html" data-lang="en">Contact</a>
     <a href="contact.html" data-lang="de">Kontakt</a>
-    <a href="impressum.html" data-lang="en">Legal Notice</a>
+    <a href="impressum.html?lang=en" data-lang="en">Legal Notice</a>
     <a href="impressum.html" data-lang="de">Impressum</a>
-    <a href="datenschutz.html" data-lang="en">Privacy</a>
+    <a href="datenschutz.html?lang=en" data-lang="en">Privacy</a>
     <a href="datenschutz.html" data-lang="de">Datenschutz</a>
   </div>
   <p class="footer-copy">© 2026 Anne Wolter · hello@annewolter.com · www.annewolter.com</p>
@@ -1061,20 +1059,13 @@ function setLang(lang) {
     const a = b.textContent.trim() === lang.toUpperCase();
     b.classList.toggle('active', a);
     b.setAttribute('aria-pressed', String(a));
-  }function setLang(lang) {
-  document.body.className = lang;
-  document.querySelectorAll('.lang-btn').forEach(b => {
-    const a = b.textContent.trim() === lang.toUpperCase();
-    b.classList.toggle('active', a);
-    b.setAttribute('aria-pressed', String(a));
   });
 }
-// Auto-detect language from URL parameter
+// Auto-detect language from URL parameter (?lang=en)
 (function() {
   const p = new URLSearchParams(window.location.search);
   if (p.get('lang') === 'en') setLang('en');
-})(););
-}
+}());
 function openMobileMenu() { document.getElementById('mobile-menu').classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); document.body.style.overflow = ''; }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMobileMenu(); });
