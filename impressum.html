@@ -1060,7 +1060,19 @@ function setLang(lang) {
     const a = b.textContent.trim() === lang.toUpperCase();
     b.classList.toggle('active', a);
     b.setAttribute('aria-pressed', String(a));
+  }function setLang(lang) {
+  document.body.className = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    const a = b.textContent.trim() === lang.toUpperCase();
+    b.classList.toggle('active', a);
+    b.setAttribute('aria-pressed', String(a));
   });
+}
+// Auto-detect language from URL parameter
+(function() {
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('lang') === 'en') setLang('en');
+})(););
 }
 function openMobileMenu() { document.getElementById('mobile-menu').classList.add('open'); document.body.style.overflow = 'hidden'; }
 function closeMobileMenu() { document.getElementById('mobile-menu').classList.remove('open'); document.body.style.overflow = ''; }
