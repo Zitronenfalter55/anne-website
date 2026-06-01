@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* All colors MUST be HSL. Brand tokens for Anne Wolter — breath. voice. aligned. */
+
+@layer base {
+  :root {
+    /* Brand palette — calm, luxurious, grounded */
+    --midnight: 216 60% 10%;          /* #0A1628 — primary navy */
+    --midnight-soft: 216 55% 13%;      /* #0E1A30 — atmospheric mid */
+    --midnight-deep: 219 63% 6%;       /* #060D1A — deepest navy */
+    --moon-cream: 38 47% 94%;          /* #F7F2EA */
+    --warm-white: 38 47% 97%;          /* #FAF7F2 */
+    --champagne: 30 47% 57%;           /* #C8965A — bronzed gold */
+    --champ-light: 32 45% 70%;         /* softer gold highlight */
+    --still-green: 153 14% 60%;        /* #8BA89A */
+    --off-white: 38 25% 90%;           /* #EDE8E0 */
+    --sand-muted: 30 10% 57%;          /* #9E9488 */
+    --earth-text: 32 18% 36%;          /* #6B5C4A */
+    --berry: 331 56% 41%;              /* #A03060 */
+    --berry-soft: 331 45% 96%;         /* warm rose */
+    --berry-deep: 338 38% 26%;         /* #5C2A3E — sophisticated, warm wine */
+
+    /* Semantic mapping (light surfaces use cream, dark surfaces use midnight) */
+    --background: var(--midnight);
+    --foreground: var(--off-white);
+
+    --card: var(--midnight-soft);
+    --card-foreground: var(--off-white);
+
+    --popover: var(--midnight);
+    --popover-foreground: var(--off-white);
+
+    --primary: var(--champagne);
+    --primary-foreground: var(--midnight);
+
+    --secondary: var(--midnight-soft);
+    --secondary-foreground: var(--moon-cream);
+
+    --muted: var(--midnight-soft);
+    --muted-foreground: var(--sand-muted);
+
+    --accent: var(--champ-light);
+    --accent-foreground: var(--midnight);
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 38 47% 94%;
+
+    --border: 35 30% 50% / 0.18;
+    --input: 35 30% 50% / 0.25;
+    --ring: var(--champagne);
+
+    --radius: 0.125rem;
+
+    --sidebar-background: var(--midnight);
+    --sidebar-foreground: var(--off-white);
+    --sidebar-primary: var(--champagne);
+    --sidebar-primary-foreground: var(--midnight);
+    --sidebar-accent: var(--midnight-soft);
+    --sidebar-accent-foreground: var(--moon-cream);
+    --sidebar-border: 35 30% 50% / 0.15;
+    --sidebar-ring: var(--champagne);
+  }
+
+  .dark {
+    /* Site is dark by default — kept for shadcn compatibility */
+    --background: var(--midnight);
+    --foreground: var(--off-white);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Jost', system-ui, sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: hsl(var(--champagne) / 0.3);
+    color: hsl(var(--moon-cream));
+  }
+}
+
+@layer base {
+  /* Ensure anchored sections clear the fixed banner + nav */
+  section[id] {
+    scroll-margin-top: 140px;
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-sans {
+    font-family: 'Jost', system-ui, sans-serif;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Atmospheric backgrounds — subtle grain + layered radial glow over navy */
+  .bg-atmosphere {
+    background-color: hsl(var(--midnight));
+    background-image:
+      radial-gradient(ellipse 80% 60% at 20% 0%, hsl(var(--champagne) / 0.06), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 90% 100%, hsl(var(--berry) / 0.05), transparent 60%),
+      radial-gradient(ellipse 100% 80% at 50% 50%, hsl(var(--midnight-soft)), hsl(var(--midnight-deep)));
+  }
+  .bg-atmosphere-soft {
+    background-color: hsl(var(--midnight-soft));
+    background-image:
+      radial-gradient(ellipse 70% 50% at 80% 10%, hsl(var(--champagne) / 0.05), transparent 60%),
+      radial-gradient(ellipse 80% 60% at 10% 90%, hsl(var(--berry) / 0.04), transparent 60%);
+  }
+  .bg-atmosphere-cream {
+    background-color: hsl(var(--moon-cream));
+    background-image:
+      radial-gradient(ellipse 60% 50% at 0% 0%, hsl(var(--champagne) / 0.10), transparent 65%),
+      radial-gradient(ellipse 70% 55% at 100% 100%, hsl(var(--berry) / 0.04), transparent 65%);
+  }
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.95 0 0 0 0 0.9 0 0 0 0 0.8 0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 220px 220px;
+  }
+}
+
+@layer components {
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-7 py-4 text-[11px] font-bold uppercase tracking-[0.2em] text-midnight rounded-[10px] transition-transform duration-200;
+    background: linear-gradient(135deg, #E8C994 0%, hsl(var(--champagne)) 100%);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  }
+  .btn-gold:hover { transform: translateY(-1px); }
+
+  .btn-gold-outline {
+    @apply inline-flex items-center justify-center px-7 py-4 text-[11px] font-bold uppercase tracking-[0.2em] rounded-[10px] transition-colors duration-200;
+    border: 1.5px solid hsl(var(--champagne));
+    color: hsl(var(--champagne));
+  }
+  .btn-gold-outline:hover { background: hsl(var(--champagne) / 0.08); }
+}
+
+/* ------------------------------------------------------------------
+   Mobile typography optimisation (≤ 767px only)
+   Improves readability on iPhone-class screens without touching
+   desktop sizes, layout, spacing or colours.
+   ------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  /* Body text — bump common arbitrary sizes ~15-20% */
+  .text-\[15px\] { font-size: 17px; line-height: 1.65; }
+  .text-\[16px\] { font-size: 18px; line-height: 1.7; }
+  .text-\[13px\] { font-size: 15px; }
+  .text-\[12px\] { font-size: 14px; }
+
+  /* Explanatory paragraphs (Six Words section, About preview, etc.) */
+  .text-lg { font-size: 1.3125rem; line-height: 1.7; }   /* 18 → 21px */
+  .text-xl { font-size: 1.4375rem; line-height: 1.7; }   /* 20 → 23px */
+
+  /* Header mobile menu links (~+20%) */
+  header .lg\:hidden a { font-size: 14.5px; }
+
+  /* Footer link copy (exclude buttons) */
+  footer a:not([class*="btn-"]) { font-size: 14px; }
+
+  /* Buttons — slight bump for touch readability */
+  .btn-gold,
+  .btn-gold-outline { font-size: 12.5px; }
+}
