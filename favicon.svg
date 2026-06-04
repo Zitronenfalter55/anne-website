@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Anne Wolter">
   <rect width="64" height="64" rx="10" fill="#0A1628"/>
+  <circle cx="32" cy="32" r="25.6" fill="none" stroke="#C8965A" stroke-width="1.6"/>
   <text x="50%" y="50%" dy="0.36em" text-anchor="middle"
         font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif"
-        font-weight="500" font-size="38" fill="#C8965A" letter-spacing="-1">AW</text>
+        font-weight="600" font-size="40" fill="#C8965A" letter-spacing="-1">A</text>
 </svg>
