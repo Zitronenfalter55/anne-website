@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Anne Wolter">
-  <rect width="64" height="64" rx="10" fill="#0A1628"/>
-  <circle cx="32" cy="32" r="25.6" fill="none" stroke="#C8965A" stroke-width="1.6"/>
-  <text x="50%" y="50%" dy="0.36em" text-anchor="middle"
-        font-family="'Cormorant Garamond', 'Times New Roman', Georgia, serif"
-        font-weight="600" font-size="40" fill="#C8965A" letter-spacing="-1">A</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <rect width="32" height="32" fill="#0A1628"/>
+  <!-- Bold geometric A, sized to the 32x32 grid; counter cut via evenodd -->
+  <path fill="#C8965A" fill-rule="evenodd" d="M14,3 H18 L29,29 H23 L21,23 H11 L9,29 H3 Z M16,9 L13,18 H19 Z"/>
 </svg>
