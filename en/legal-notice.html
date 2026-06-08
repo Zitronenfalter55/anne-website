@@ -73,5 +73,49 @@ Germany</div></section><section><h2 class="text-[10px] uppercase tracking-[0.28e
   });
 })();
 </script>
+<script>
+(function(){
+  var btn = document.querySelector('button[aria-controls="mobile-nav"]');
+  if (!btn) return;
+  var header = btn.closest('header');
+  if (!header) return;
+  var desktopNav = header.querySelector('nav > div.hidden.xl\\:flex');
+  var ctaLink = header.querySelector('nav a.btn-gold');
+  var panel = document.createElement('div');
+  panel.id = 'mobile-nav';
+  panel.className = 'xl:hidden border-t border-champagne/10 bg-midnight relative z-[55]';
+  panel.style.display = 'none';
+  panel.style.maxHeight = 'calc(100vh - 96px)';
+  panel.style.overflowY = 'auto';
+  var inner = document.createElement('div');
+  inner.className = 'flex flex-col px-6 py-7 gap-5';
+  if (desktopNav) {
+    var links = desktopNav.querySelectorAll('a');
+    links.forEach(function(a){
+      var clone = a.cloneNode(true);
+      clone.className = 'nav-link text-[15px] uppercase tracking-[0.18em] py-1 transition-colors touch-manipulation text-offwhite font-medium hover:text-champagne';
+      clone.addEventListener('click', function(){ close(); });
+      inner.appendChild(clone);
+    });
+  }
+  if (ctaLink) {
+    var ctaClone = ctaLink.cloneNode(true);
+    ctaClone.className = 'btn-gold text-center leading-tight mt-2';
+    ctaClone.setAttribute('style','padding:12px 18px;font-size:11px');
+    ctaClone.addEventListener('click', function(){ close(); });
+    inner.appendChild(ctaClone);
+  }
+  panel.appendChild(inner);
+  header.appendChild(panel);
+  var menuIcon = btn.innerHTML;
+  var xIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>';
+  function open(){ panel.style.display=''; btn.setAttribute('aria-expanded','true'); btn.innerHTML = xIcon; }
+  function close(){ panel.style.display='none'; btn.setAttribute('aria-expanded','false'); btn.innerHTML = menuIcon; }
+  btn.addEventListener('click', function(ev){
+    ev.preventDefault();
+    if (btn.getAttribute('aria-expanded') === 'true') close(); else open();
+  });
+})();
+</script>
 </body>
 </html>
