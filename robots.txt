@@ -12,6 +12,8 @@ Allow: /
 
 User-agent: *
 Allow: /
-Disallow: /thank-you
+Disallow: /thank-you.html
+Disallow: /en/thank-you.html
+Disallow: /de/thank-you.html
 
-Sitemap: https://annewolter.com/sitemap.xml
+Sitemap: https://www.annewolter.com/sitemap.xml
