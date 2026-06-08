@@ -55,16 +55,8 @@
       ev.preventDefault();
       var lang = btn.getAttribute('data-set-lang');
       var target = btn.getAttribute('data-target-file') || (location.pathname.split('/').pop() || 'index.html');
-      // From /en/<file> EN → root same English file; DE → ../de/<altTarget>
-      // From /de/<file> DE → self; EN → ../<altTarget>
-      var here = location.pathname;
-      if (here.indexOf('/en/') !== -1) {
-        if (lang === 'en') { location.href = '../' + target; }
-        else { location.href = '../de/' + target; }
-      } else if (here.indexOf('/de/') !== -1) {
-        if (lang === 'de') { return; }
-        else { location.href = '../' + target; }
-      }
+      if (lang === 'de') { location.href = './de/' + target; }
+      else { location.href = './' + target; }
     });
   });
 })();

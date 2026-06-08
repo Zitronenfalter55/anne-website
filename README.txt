@@ -2,13 +2,17 @@ Anne Wolter — Static Site Export
 =================================
 
 Diese Dateien sind eigenstaendige HTML-Seiten (kein React-Build noetig).
-Jede Datei enthaelt beide Sprachen (EN/DE); der Toggle oben rechts in der
-Nav schaltet um (Auswahl wird im Browser per localStorage gespeichert).
+Root- und /en-Seiten enthalten Englisch, /de-Seiten enthalten Deutsch.
+Die Sprachumschaltung verlinkt zwischen den getrennten Sprachdateien.
 
 Inhalt:
   - index.html, method.html, work-with-me.html, workshops.html, about.html,
-    discovery-call.html, breath-reset.html, thank-you.html, datenschutz.html,
-    impressum.html, withdrawal-policy.html, terms-and-conditions.html
+    discovery-call.html, breath-reset.html, thank-you.html,
+    privacy-policy.html, legal-notice.html, withdrawal-policy.html,
+    terms-and-conditions.html
+  - en/ : englische Duplikate
+  - de/ : deutsche Seiten inkl. datenschutz.html, impressum.html, agb.html,
+    widerruf.html
 - assets/ : CSS, Bilder, Fonts werden ueber Google Fonts geladen
 
 Verwendung:
