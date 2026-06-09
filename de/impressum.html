@@ -93,7 +93,8 @@ Germany</div></section><section><h2 class="text-[10px] uppercase tracking-[0.28e
     var links = desktopNav.querySelectorAll('a');
     links.forEach(function(a){
       var clone = a.cloneNode(true);
-      clone.className = 'nav-link text-[15px] uppercase tracking-[0.18em] py-1 transition-colors touch-manipulation text-offwhite font-medium hover:text-champagne';
+      var isActive = a.getAttribute('data-active') === 'true' || a.getAttribute('aria-current') === 'page';
+      clone.className = 'nav-link text-[15px] uppercase tracking-[0.18em] py-1 transition-colors touch-manipulation ' + (isActive ? 'text-champagne font-semibold' : 'text-offwhite font-medium hover:text-champagne');
       clone.addEventListener('click', function(){ close(); });
       inner.appendChild(clone);
     });
