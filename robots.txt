@@ -12,8 +12,11 @@ Allow: /
 
 User-agent: *
 Allow: /
-Disallow: /thank-you.html
-Disallow: /en/thank-you.html
-Disallow: /de/thank-you.html
+Disallow: /thank-you
+Disallow: /en/thank-you
+Disallow: /de/thank-you
+Disallow: /breath-reset-confirmation
+Disallow: /en/breath-reset-confirmation
+Disallow: /de/breath-reset-confirmation
 
 Sitemap: https://www.annewolter.com/sitemap.xml
