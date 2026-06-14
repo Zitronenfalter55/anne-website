@@ -54,14 +54,17 @@
     btn.addEventListener('click', function(ev){
       ev.preventDefault();
       var lang = btn.getAttribute('data-set-lang');
-      var target = btn.getAttribute('data-target-file') || (location.pathname.split('/').pop() || 'index.html');
-      // From /en/<file> EN → root same English file; DE → ../de/<altTarget>
-      // From /de/<file> DE → self; EN → ../<altTarget>
+      var target = btn.getAttribute('data-target-file');
+      if (target === null) {
+        target = location.pathname.split('/').pop() || 'index.html';
+      }
       var here = location.pathname;
-      if (here.indexOf('/en/') !== -1) {
+      var inEn = here === '/en' || here.indexOf('/en/') === 0;
+      var inDe = here === '/de' || here.indexOf('/de/') === 0;
+      if (inEn) {
         if (lang === 'en') { location.href = '../' + target; }
         else { location.href = '../de/' + target; }
-      } else if (here.indexOf('/de/') !== -1) {
+      } else if (inDe) {
         if (lang === 'de') { return; }
         else { location.href = '../' + target; }
       }

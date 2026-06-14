@@ -58,7 +58,10 @@ Germany</div></section><section><h2 class="text-[10px] uppercase tracking-[0.28e
     btn.addEventListener('click', function(ev){
       ev.preventDefault();
       var lang = btn.getAttribute('data-set-lang');
-      var target = btn.getAttribute('data-target-file') || (location.pathname.split('/').pop() || 'index.html');
+      var target = btn.getAttribute('data-target-file');
+      if (target === null) {
+        target = location.pathname.split('/').pop() || 'index.html';
+      }
       if (lang === 'de') { location.href = './de/' + target; }
       else { location.href = './' + target; }
     });

@@ -68,7 +68,10 @@ If you would like to hear about upcoming workshops and special events, I would b
     btn.addEventListener('click', function(ev){
       ev.preventDefault();
       var lang = btn.getAttribute('data-set-lang');
-      var target = btn.getAttribute('data-target-file') || (location.pathname.split('/').pop() || 'index.html');
+      var target = btn.getAttribute('data-target-file');
+      if (target === null) {
+        target = location.pathname.split('/').pop() || 'index.html';
+      }
       if (lang === 'de') { location.href = './de/' + target; }
       else { location.href = './' + target; }
     });

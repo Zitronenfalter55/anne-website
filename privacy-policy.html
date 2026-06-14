@@ -107,7 +107,10 @@ Last updated: May 2026</p></div></div></div></section></main><footer class="bg-m
     btn.addEventListener('click', function(ev){
       ev.preventDefault();
       var lang = btn.getAttribute('data-set-lang');
-      var target = btn.getAttribute('data-target-file') || (location.pathname.split('/').pop() || 'index.html');
+      var target = btn.getAttribute('data-target-file');
+      if (target === null) {
+        target = location.pathname.split('/').pop() || 'index.html';
+      }
       if (lang === 'de') { location.href = './de/' + target; }
       else { location.href = './' + target; }
     });
