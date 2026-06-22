@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
 <link rel="icon" href="/favicon.ico" sizes="any" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -138,6 +139,27 @@ If you would like to hear about upcoming workshops and special events, I would b
           'allowfullscreen referrerpolicy="strict-origin-when-cross-origin" ' +
           'style="display:block;border:0;"></iframe>' +
         '</div>';
+    });
+  });
+})();
+</script>
+<script>
+(function(){
+  var cards = document.querySelectorAll('[data-brevo-placeholder]');
+  if (!cards.length) return;
+  cards.forEach(function(card){
+    var btn = card.querySelector('[data-brevo-load]');
+    if (!btn) return;
+    btn.addEventListener('click', function(){
+      var src = card.getAttribute('data-brevo-src');
+      var title = card.getAttribute('data-brevo-title') || '';
+      var h = card.getAttribute('data-brevo-height') || '380';
+      if (!src) return;
+      card.innerHTML =
+        '<iframe src="' + src + '" title="' + title + '" width="100%" height="' + h + '" ' +
+        'frameborder="0" scrolling="auto" allowfullscreen ' +
+        'referrerpolicy="strict-origin-when-cross-origin" ' +
+        'style="display:block;border:0;max-width:100%;"></iframe>';
     });
   });
 })();
