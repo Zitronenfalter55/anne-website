@@ -1,4 +1,22 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/voice-alignment", "destination": "/method", "permanent": true },
+    { "source": "/datenschutz", "destination": "/de/datenschutz", "permanent": true },
+    { "source": "/impressum", "destination": "/de/impressum", "permanent": true },
+    { "source": "/agb", "destination": "/de/agb", "permanent": true },
+    { "source": "/widerruf", "destination": "/de/widerruf", "permanent": true },
+    { "source": "/widerruf-formular", "destination": "/de/widerruf-formular", "permanent": true },
+    { "source": "/atem-reset-bereit", "destination": "/de/atem-reset-bereit", "permanent": true },
+    { "source": "/atem-reset-ressourcen", "destination": "/de/atem-reset-ressourcen", "permanent": true },
+    { "source": "/de/about", "destination": "/de/ueber-anne", "permanent": true },
+    { "source": "/de/method", "destination": "/de/methode", "permanent": true },
+    { "source": "/de/work-with-me", "destination": "/de/arbeit-mit-anne", "permanent": true },
+    { "source": "/de/breath-reset", "destination": "/de/atem-reset", "permanent": true },
+    { "source": "/de/breath-reset-confirmation", "destination": "/de/atem-reset-bestaetigung", "permanent": true },
+    { "source": "/de/breath-reset-ready", "destination": "/de/atem-reset-bereit", "permanent": true },
+    { "source": "/de/breath-reset-resources", "destination": "/de/atem-reset-ressourcen", "permanent": true },
+    { "source": "/de/thank-you", "destination": "/de/danke", "permanent": true }
+  ]
 }

@@ -6,21 +6,14 @@ Root- und /en-Seiten enthalten Englisch, /de-Seiten enthalten Deutsch.
 Die Sprachumschaltung verlinkt zwischen den getrennten Sprachdateien.
 
 Inhalt:
-  - index.html, method.html, work-with-me.html, workshops.html, about.html,
-    discovery-call.html, breath-reset.html, thank-you.html,
-    privacy-policy.html, legal-notice.html, withdrawal-policy.html,
-    terms-and-conditions.html
-  - en/ : englische Duplikate
-  - de/ : deutsche Seiten inkl. datenschutz.html, impressum.html, agb.html,
-    widerruf.html
-- assets/ : CSS, Bilder, Fonts werden ueber Google Fonts geladen
-
-Verwendung:
-1) Komplett uebernehmen: Ordner auf den Server (z.B. annewolter.com/voice/).
-2) Einzelne Sektionen: Datei im Browser oeffnen, gewuenschte <section>
-   via Inspector / View Source kopieren. Styles aus assets/*.css uebernehmen
-   oder durch deine bestehenden ersetzen.
-
-Hinweise:
-- Discovery- und Breath-Reset-Formulare sind reines Frontend; an dein
-  Backend / Formular-Tool anzubinden.
+  - Root EN (clean URLs via Vercel): /, /method, /about, /work-with-me,
+    /workshops, /breath-reset, /breath-reset-ready, /breath-reset-resources,
+    /breath-reset-confirmation, /discovery-call, /thank-you, /privacy-policy,
+    /legal-notice, /terms-and-conditions, /withdrawal-policy, /withdrawal-form
+  - /en/ : englische Duplikate
+  - /de/ : deutsche Seiten unter dt. Slugs (/de/methode, /de/ueber-anne,
+    /de/arbeit-mit-anne, /de/atem-reset, /de/atem-reset-bereit,
+    /de/atem-reset-ressourcen, /de/atem-reset-bestaetigung, /de/discovery-call,
+    /de/danke, /de/datenschutz, /de/impressum, /de/agb, /de/widerruf,
+    /de/widerruf-formular)
+  - assets/ : CSS, Bilder, Fonts werden ueber Google Fonts geladen
