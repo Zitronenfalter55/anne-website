@@ -223,5 +223,32 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://www.annewolter.com/de/widerruf-formular" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.annewolter.com/withdrawal-form" />
     <changefreq>yearly</changefreq><priority>0.3</priority>
+  <url>
+    <loc>https://www.annewolter.com/your-voice-alignment-journey-confirmation</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.annewolter.com/your-voice-alignment-journey-confirmation" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.annewolter.com/de/deine-voice-alignment-reise-bestaetigung" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.annewolter.com/your-voice-alignment-journey-confirmation" />
+    <changefreq>yearly</changefreq><priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.annewolter.com/de/deine-voice-alignment-reise-bestaetigung</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.annewolter.com/your-voice-alignment-journey-confirmation" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.annewolter.com/de/deine-voice-alignment-reise-bestaetigung" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.annewolter.com/your-voice-alignment-journey-confirmation" />
+    <changefreq>yearly</changefreq><priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.annewolter.com/your-voice-alignment-journey-success</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.annewolter.com/your-voice-alignment-journey-success" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.annewolter.com/de/deine-voice-alignment-reise-erfolgreich" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.annewolter.com/your-voice-alignment-journey-success" />
+    <changefreq>yearly</changefreq><priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.annewolter.com/de/deine-voice-alignment-reise-erfolgreich</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.annewolter.com/your-voice-alignment-journey-success" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.annewolter.com/de/deine-voice-alignment-reise-erfolgreich" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.annewolter.com/your-voice-alignment-journey-success" />
+    <changefreq>yearly</changefreq><priority>0.3</priority>
   </url>
 </urlset>
