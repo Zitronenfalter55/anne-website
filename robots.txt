@@ -18,5 +18,12 @@ Disallow: /de/thank-you
 Disallow: /breath-reset-confirmation
 Disallow: /en/breath-reset-confirmation
 Disallow: /de/breath-reset-confirmation
+Disallow: /internal/
+Disallow: /founding-circle
+Disallow: /de/founding-circle
+Disallow: /journey-follow-up
+Disallow: /de/journey-nachbereitung
+Disallow: /voice-alignment-practice
+Disallow: /de/voice-alignment-praxis
 
 Sitemap: https://www.annewolter.com/sitemap.xml
