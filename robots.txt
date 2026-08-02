@@ -19,6 +19,9 @@ Disallow: /breath-reset-confirmation
 Disallow: /en/breath-reset-confirmation
 Disallow: /de/breath-reset-confirmation
 Disallow: /internal/
+Disallow: /bali-journey
+Disallow: /en/bali-journey
+Disallow: /de/bali-reise
 Disallow: /founding-circle
 Disallow: /de/founding-circle
 Disallow: /journey-follow-up

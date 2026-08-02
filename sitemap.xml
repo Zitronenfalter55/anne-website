@@ -251,18 +251,4 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.annewolter.com/your-voice-alignment-journey-success" />
     <changefreq>yearly</changefreq><priority>0.3</priority>
   </url>
-  <url>
-    <loc>https://www.annewolter.com/bali-journey</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.annewolter.com/bali-journey" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.annewolter.com/de/bali-reise" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.annewolter.com/bali-journey" />
-    <changefreq>monthly</changefreq><priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.annewolter.com/de/bali-reise</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.annewolter.com/bali-journey" />
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.annewolter.com/de/bali-reise" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.annewolter.com/bali-journey" />
-    <changefreq>monthly</changefreq><priority>0.6</priority>
-  </url>
 </urlset>
